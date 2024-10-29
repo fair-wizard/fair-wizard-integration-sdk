@@ -1,0 +1,104 @@
+.sidebar-logo-container {
+    margin: 1rem .5rem;
+}
+
+.sidebar-tree .toctree-l1>.reference, .sidebar-tree .toctree-l1>label .icon {
+    color: var(--color-sidebar-link-text);
+}
+
+.sidebar-tree .reference:hover, .sidebar-tree .current>.reference:hover {
+    background: var(--color-background-hover);
+}
+
+.sidebar-tree .current-page>.reference {
+    color: var(--color-brand-primary);
+    background: #019AD620 !important;
+}
+
+.sidebar-tree .reference {
+    border-radius: .25rem;
+}
+
+.sidebar-tree {
+    padding-right: .25rem;
+    padding-left: .25rem;
+}
+
+.sidebar-tree ul ul {
+    border-left: 1px solid var(--color-background-border);
+    margin-left: var(--sidebar-item-spacing-horizontal) !important;
+    padding-left: 0.5rem !important;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-tree ul li:not(:last-child) {
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-container {
+    width: 17rem;
+}
+
+.sidebar-drawer {
+    width: calc(50% - 20em);
+}
+
+a:hover {
+    text-decoration-color: var(--color-link--hover) !important;
+}
+
+#furo-sidebar-ad-placement {
+    margin-top: 7rem;
+}
+
+.rst-versions .rst-current-version {
+    color: var(--color-brand-primary) !important;
+}
+
+.rst-versions a {
+    color: var(--color-brand-primary) !important;
+    cursor: pointer;
+}
+
+.article-container table {
+    width: 99%;
+}
+
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin-top: 3rem;
+}
+
+article p {
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+article .admonition, article .topic {
+    margin: 2rem auto;
+}
+
+.markdown-table td, .markdown-table th {
+    width: 50%;
+}
+
+.td-markdown-code {
+    font-family: var(--font-stack--monospace);
+    padding: 0.5rem !important;
+}
+
+.menuselection {
+    background-color: var(--color-guilabel-background);
+    border: 1px solid var(--color-guilabel-border);
+    border-radius: .5em;
+    color: var(--color-guilabel-text);
+    font-size: .9em;
+    padding: 0 .3em;
+}
+
+figcaption p {
+    margin-top: 0;
+    color: var(--color-toc-item-text);
+    font-size: 80%;
+}
