@@ -4,14 +4,14 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'fair-wizard-integration-sdk'
-version = '0.1.0'
+version = '1.0.0'
 description = 'Python SDK for building integrations with FAIR Wizard'
 readme = 'README.md'
 keywords = ['fair-wizard', 'integration', 'automation', 'sdk']
 license = { file = 'Apache 2.0' }
 authors = [
-    { name = 'Vojtěch Knaisl', email = 'vojtech.knaisl@codevence.com' },
-    { name = 'Marek Suchánek', email = 'marek.suchanek@codevence.com' },
+    { name = 'Vojtěch Knaisl', email = 'vojtech.knaisl@fair-wizard.com' },
+    { name = 'Marek Suchánek', email = 'marek.suchanek@fair-wizard.com' },
 ]
 classifiers = [
     'Development Status :: 5 - Production/Stable',
