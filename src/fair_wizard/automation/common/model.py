@@ -16,7 +16,7 @@ class AuthorizedUserResponse(BaseModel):
     user_group_uuids: list[uuid.UUID] = Field(alias='userGroupUuids')
 
     def serialize(self):
-        return self.model_dump(by_alias=True)
+        return self.model_dump(by_alias=True, mode='json')
 
 
 class ForbiddenResponse(BaseModel):
@@ -26,7 +26,7 @@ class ForbiddenResponse(BaseModel):
     message: str = Field(alias='message')
 
     def serialize(self):
-        return self.model_dump(by_alias=True)
+        return self.model_dump(by_alias=True, mode='json')
 
 
 class ErrorResponse(BaseModel):
@@ -36,7 +36,7 @@ class ErrorResponse(BaseModel):
     message: str
 
     def serialize(self):
-        return self.model_dump(by_alias=True)
+        return self.model_dump(by_alias=True, mode='json')
 
 
 class HandlerContext:

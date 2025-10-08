@@ -8,6 +8,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 
+## [1.0.1] (2025-10-07)
+
+### Fixed
+
+- Fix crash when returning user groups in OpenID and SAML automations
+
 ## [1.0.1] (2024-11-12)
 
 ### Fixed
