@@ -1,3 +1,5 @@
+from uuid import UUID
+
 from fair_wizard.automation.common import UserLoginResponse, AuthorizedUserResponse, ErrorResponse
 from fair_wizard.automation.saml.helpers import get_first_name, get_last_name, get_email
 from fair_wizard.automation.saml.model import SamlUserLoggedInEvent
@@ -17,5 +19,5 @@ def handle_saml_user_logged_in(saml_event: SamlUserLoggedInEvent) -> UserLoginRe
         email=email,
         image_url=None,
         affiliation=None,
-        user_group_uuids=[],
+        user_group_uuids=[UUID('7df586cc-e7ad-47b1-bc24-fbe132fbd391')],
     )

@@ -4,7 +4,7 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'fair-wizard-integration-sdk'
-version = '1.0.1'
+version = '1.0.2'
 description = 'Python SDK for building integrations with FAIR Wizard'
 readme = 'README.md'
 keywords = ['fair-wizard', 'integration', 'automation', 'sdk']
