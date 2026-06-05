@@ -14,8 +14,7 @@ lambda-package:
 	cp -R ./src/fair_wizard ./package/python/lib/python3.11/site-packages
 
 	# 2. Package the ZIP and clean
-	$(PIP) install --upgrade --target ./package/python/lib/python3.11/site-packages --platform manylinux2014_x86_64 --implementation cp --only-binary=:all: "pydantic"
-	$(PIP) install --upgrade --target ./package/python/lib/python3.11/site-packages --platform manylinux2014_x86_64 --implementation cp --only-binary=:all: "pydantic_core"
+	$(PIP) install --upgrade --target ./package/python/lib/python3.11/site-packages --platform manylinux2014_x86_64 --implementation cp --only-binary=:all: "pydantic==2.9.2" "pydantic_core==2.23.4"
 	cd package && zip -r ../fair-wizard-integration-sdk-lambda-layer.zip .
 	rm -rf package
 
