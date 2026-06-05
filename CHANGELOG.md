@@ -8,6 +8,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 
+## [1.1.1] (2026-06-05)
+
+### Fixed
+
+- Pin `pydantic` and `pydantic_core` versions when building the Lambda layer to avoid a runtime version mismatch
+
 ## [1.1.0] (2026-06-05)
 
 ### Added
@@ -41,6 +47,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
 [Unreleased]: /../../compare/main...develop
+[1.1.1]: /../../compare/v1.1.0...v1.1.1
 [1.1.0]: /../../compare/v1.0.2...v1.1.0
 [1.0.2]: /../../compare/v1.0.1...v1.0.2
 [1.0.1]: /../../compare/v1.0.0...v1.0.1
