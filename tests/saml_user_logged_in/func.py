@@ -19,5 +19,7 @@ def handle_saml_user_logged_in(saml_event: SamlUserLoggedInEvent) -> UserLoginRe
         email=email,
         image_url=None,
         affiliation=None,
+        external_id=saml_event.assertion.subject.name_id.value,
+        external_label=email,
         user_group_uuids=[UUID('7df586cc-e7ad-47b1-bc24-fbe132fbd391')],
     )

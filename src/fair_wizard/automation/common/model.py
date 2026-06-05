@@ -8,11 +8,13 @@ class AuthorizedUserResponse(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
 
     type: str = 'AuthorizedUserResponse'
-    first_name: str = Field(alias='firstName')
-    last_name: str = Field(alias='lastName')
-    email: str = Field(alias='email')
+    first_name: str | None = Field(alias='firstName')
+    last_name: str | None = Field(alias='lastName')
+    email: str | None = Field(alias='email')
     image_url: str | None = Field(alias='imageUrl')
     affiliation: str | None = Field(alias='affiliation')
+    external_id: str = Field(alias='externalId')
+    external_label: str | None = Field(alias='externalLabel', default=None)
     user_group_uuids: list[uuid.UUID] = Field(alias='userGroupUuids')
 
     def serialize(self):

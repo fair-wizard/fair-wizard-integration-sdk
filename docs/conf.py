@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.abspath('../src'))
 project = 'FAIR Wizard Integration SDK'
 copyright = '2024, Codevence Solutions'
 author = 'Codevence Solutions'
-release = '0.1.0'
+release = '1.1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
