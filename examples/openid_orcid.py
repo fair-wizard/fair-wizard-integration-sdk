@@ -20,7 +20,6 @@ def openid_user_logged_in_function(openid_event: OpenIdUserLoggedInEvent) -> Use
         email=email,
         external_id=openid_event.id_token.sub,
         external_label=email,
-        user_group_uuids=[],
     )
 
 

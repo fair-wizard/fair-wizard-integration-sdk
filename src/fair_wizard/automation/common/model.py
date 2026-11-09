@@ -4,8 +4,16 @@ import uuid
 from pydantic import BaseModel, Field, ConfigDict
 
 
+class UserWorkspace(BaseModel):
+    model_config = ConfigDict(populate_by_name=True, extra='forbid')
+
+    workspace_uuid: uuid.UUID = Field(alias='workspaceUuid')
+    role_uuid: uuid.UUID | None = Field(alias='roleUuid', default=None)
+    user_group_uuids: list[uuid.UUID] = Field(alias='userGroupUuids', default=[])
+
+
 class AuthorizedUserResponse(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(populate_by_name=True, extra='forbid')
 
     type: str = 'AuthorizedUserResponse'
     first_name: str | None = Field(alias='firstName')
@@ -13,9 +21,10 @@ class AuthorizedUserResponse(BaseModel):
     email: str | None = Field(alias='email')
     image_url: str | None = Field(alias='imageUrl')
     affiliation: str | None = Field(alias='affiliation')
-    external_id: str = Field(alias='externalId')
+    external_id: str | None = Field(alias='externalId')
     external_label: str | None = Field(alias='externalLabel', default=None)
-    user_group_uuids: list[uuid.UUID] = Field(alias='userGroupUuids')
+    tenant_role_uuid: uuid.UUID | None = Field(alias='tenantRoleUuid', default=None)
+    workspaces: list[UserWorkspace] = Field(alias='workspaces', default=[])
 
     def serialize(self):
         return self.model_dump(by_alias=True, mode='json')

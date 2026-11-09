@@ -37,3 +37,5 @@ result = handler(
 )
 
 print(json.dumps(result, indent=2))
+assert result['type'] == 'AuthorizedUserResponse', result
+assert result['workspaces'][0]['userGroupUuids'] == ['7df586cc-e7ad-47b1-bc24-fbe132fbd391'], result

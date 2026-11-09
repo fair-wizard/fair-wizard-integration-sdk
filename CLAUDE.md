@@ -60,7 +60,7 @@ The SDK uses a **handler factory pattern** with three layers:
 3. **Handlers** (`handlers.py`) — Default handler implementations.
 
 Module layout under `src/fair_wizard/automation/`:
-- `common/` — Shared response models (`AuthorizedUserResponse`, `ForbiddenResponse`, `ErrorResponse`), `HandlerContext`, and the generic `make_handler`/`make_error_handler` wrappers.
+- `common/` — Shared response models (`AuthorizedUserResponse` with its `UserWorkspace` entries, `ForbiddenResponse`, `ErrorResponse`), `HandlerContext`, and the generic `make_handler`/`make_error_handler` wrappers. `AuthorizedUserResponse` mirrors the backend's `AutomationUserResponse` (FAIR Wizard 5.0: `tenantRoleUuid`, `workspaces[]`) and forbids unknown fields, so a removed field fails loudly.
 - `saml/` — SAML assertion models, attribute helpers (`get_first_name`, `get_last_name`, `get_email` which search by friendly name or OID URN).
 - `openid/` — OpenID `IdToken` model with standard + custom claims (`otherClaims` dict).
 

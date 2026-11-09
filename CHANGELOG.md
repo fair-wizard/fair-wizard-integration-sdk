@@ -8,6 +8,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 
+## [2.0.0] (2026-11-09)
+
+Requires FAIR Wizard 5.0.
+
+### Added
+
+- `tenantRoleUuid` in the authorized user response to set the user's tenant role
+- `workspaces` in the authorized user response (`UserWorkspace` with `workspaceUuid`, `roleUuid` and `userGroupUuids`) to make the user a member of workspaces, set the workspace role and add the user to groups of that workspace
+
+### Changed
+
+- `externalId` in the authorized user response is optional
+- The authorized user response rejects unknown fields instead of ignoring them
+
+### Removed
+
+- `userGroupUuids` at the top level of the authorized user response, groups are listed under their workspace in `workspaces`
+
 ## [1.1.1] (2026-06-05)
 
 ### Fixed
@@ -47,6 +65,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
 [Unreleased]: /../../compare/main...develop
+[2.0.0]: /../../compare/v1.1.1...v2.0.0
 [1.1.1]: /../../compare/v1.1.0...v1.1.1
 [1.1.0]: /../../compare/v1.0.2...v1.1.0
 [1.0.2]: /../../compare/v1.0.1...v1.0.2
