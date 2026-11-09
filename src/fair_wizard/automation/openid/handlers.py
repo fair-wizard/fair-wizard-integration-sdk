@@ -17,5 +17,4 @@ def handle_openid_user_logged_in(openid_event: OpenIdUserLoggedInEvent) -> UserL
         email=openid_event.id_token.other_claims.get('email'),
         external_id=openid_event.id_token.sub,
         external_label=openid_event.id_token.other_claims.get('email'),
-        user_group_uuids=[],
     )

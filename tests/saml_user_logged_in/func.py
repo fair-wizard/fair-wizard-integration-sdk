@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from fair_wizard.automation.common import UserLoginResponse, AuthorizedUserResponse, ErrorResponse
+from fair_wizard.automation.common import UserLoginResponse, AuthorizedUserResponse, ErrorResponse, UserWorkspace
 from fair_wizard.automation.saml.helpers import get_first_name, get_last_name, get_email
 from fair_wizard.automation.saml.model import SamlUserLoggedInEvent
 
@@ -21,5 +21,11 @@ def handle_saml_user_logged_in(saml_event: SamlUserLoggedInEvent) -> UserLoginRe
         affiliation=None,
         external_id=saml_event.assertion.subject.name_id.value,
         external_label=email,
-        user_group_uuids=[UUID('7df586cc-e7ad-47b1-bc24-fbe132fbd391')],
+        workspaces=[
+            UserWorkspace(
+                workspace_uuid=UUID('3c0b1e6a-5b7e-4d0e-9a51-2f3c4d5e6f70'),
+                role_uuid=UUID('a6f0e2d4-1c3b-4e5f-8a7b-9c0d1e2f3a4b'),
+                user_group_uuids=[UUID('7df586cc-e7ad-47b1-bc24-fbe132fbd391')],
+            ),
+        ],
     )
